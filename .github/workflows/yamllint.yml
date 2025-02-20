@@ -12,7 +12,7 @@ jobs:
       - name: YAML Lint
         uses: ibiqlik/action-yamllint@v3.1.1
         with:
-          file_or_dir: ./**
+          file_or_dir: ./**/*.yaml
     #config_file: # optional
     # Custom configuration (as YAML source)
     #config_data: # optional
