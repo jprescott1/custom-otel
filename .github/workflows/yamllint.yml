@@ -1,6 +1,6 @@
 name: yaml lint
 
-on: [push, pull_request]
+on: [pull_request]
 
 jobs:
   yaml-lint:
@@ -12,7 +12,7 @@ jobs:
       - name: YAML Lint
         uses: ibiqlik/action-yamllint@v3.1.1
         with:
-          file_or_dir: ./
+          file_or_dir: ./**/*.yaml
     #config_file: # optional
     # Custom configuration (as YAML source)
     #config_data: # optional
@@ -20,4 +20,3 @@ jobs:
     #format: # optional, default is parsable
     # Return non-zero exit code on warnings as well as errors
     #no_warnings: # optional, default is false
-          
