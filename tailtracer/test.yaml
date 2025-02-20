@@ -1,6 +1,6 @@
 receivers:
-otlp:
-protocols:
+  otlp:
+    protocols:
       grpc:
         endpoint: 0.0.0.0:4317
 
@@ -11,7 +11,8 @@ exporters:
   # NOTE: Prior to v0.86.0 use `logging` instead of `debug`.
   debug:
     verbosity: detailed
-  otlp/jaeger:endpoint: localhost:14317
+  otlp/jaeger:
+    endpoint: localhost:14317
     tls:
       insecure: true  # Its a lab don't fret
 
