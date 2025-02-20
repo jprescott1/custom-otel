@@ -1,0 +1,23 @@
+name: yaml lint
+
+on: [push, pull_request]
+
+jobs:
+  yaml-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v4
+
+      - name: YAML Lint
+        uses: ibiqlik/action-yamllint@v3.1.1
+        with:
+          file_or_dir: ./
+    #config_file: # optional
+    # Custom configuration (as YAML source)
+    #config_data: # optional
+    # Format for parsing output [parsable,standard,colored,github,auto]
+    #format: # optional, default is parsable
+    # Return non-zero exit code on warnings as well as errors
+    #no_warnings: # optional, default is false
+          
