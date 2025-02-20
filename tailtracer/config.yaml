@@ -1,3 +1,4 @@
+---
 receivers:
   tailtracer: # this line represents the ID of your receiver
     interval: 1m
